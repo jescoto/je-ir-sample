@@ -11,7 +11,7 @@ export default function App() {
     useEffect( () => {
         fetch("https://randomuser.me/api/?results=50").then(resp => resp.json()).then((response) => {
             if(response.results) {
-                
+
                 const users = response.results.map((user) => {
                     return {
                         id: user.login.uuid,
